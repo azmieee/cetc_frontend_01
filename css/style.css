@@ -356,3 +356,256 @@
 .copyright a:hover {
     color: var(--light);
 }
+
+.topbar2 {
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 90px;
+}
+
+.cert {
+    height: 80px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item span {
+    font-size: 14px;
+    color: #555;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/* Topbar Background */
+
+.topbar2 {
+    background-color: #ffffff;
+    /* Light grey background */
+    border-bottom: 1px solid #ffffff;
+    color: black !important;
+    /* Ensures all text is black */
+}
+
+.topbar3 {
+    background-color: #919090;
+    /* Light grey background */
+    border-bottom: 1px solid #ffffff;
+    color: black !important;
+    /* Ensures all text is black */
+}
+
+
+/* Topbar Icons */
+
+.topbar2 i,
+.topbar2 small {
+    color: black !important;
+    /* Forces black color for icons and small text */
+}
+
+.topbar3 i,
+.topbar3 small {
+    color: black !important;
+    /* Forces black color for icons and small text */
+}
+
+@media (max-width: 768px) {
+    .topbar2 {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .topbar2 .cert {
+        height: 60px;
+        /* Reduce size for small screens */
+        margin-bottom: 5px;
+    }
+    .topbar2 .contact-item {
+        margin-bottom: 5px;
+    }
+    .topbar2 .btn-warning {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+
+/* Reduce border-radius for all elements */
+
+body *:not(.navbar):not(.header-container) :not(.container-fluid) {
+    border-radius: 5px !important;
+}
+
+
+/* Ensure buttons have a nice hover effect */
+
+.custom-btn,
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover,
+.btn:hover {
+    background-color: #e0400fe6 !important;
+    /* Change to yellow on hover */
+    color: #000 !important;
+    /* Change text color */
+    transform: scale(1.05);
+    /* Slightly enlarge */
+}
+
+.carousel-caption h1 {
+    position: relative;
+    opacity: 0;
+    transform: translateY(-200px);
+    /* Start from the header */
+    animation: slideInFromHeader 1s ease-out forwards;
+}
+
+@keyframes slideInFromHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+        /* Start far above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Move to normal position */
+    }
+}
+
+.logo {
+    max-height: 50px;
+    width: auto;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.left,
+.right {
+    width: 48%;
+}
+
+h2 {
+    color: #222;
+}
+
+.section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.accordion {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    width: 100%;
+}
+
+.accordion:hover {
+    background-color: #f1f1f1;
+}
+
+.panel {
+    padding: 15px;
+    display: none;
+    background-color: #fff;
+    border-left: 3px solid #f7b500;
+}
+
+.active {
+    display: block;
+}
+
+
+/* Change text color to yellow when expanded */
+
+.accordion.active {
+    color: #F3BD00;
+}
+
+.quality-btn {
+    background-color: rgb(137, 7, 7);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.quality-btn:hover {
+    background-color: rgb(46, 13, 2);
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left,
+    .right {
+        width: 100%;
+        padding: 10px;
+    }
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .accordion {
+        font-size: 16px;
+        padding: 12px;
+    }
+    .quality-btn {
+        width: 100%;
+        font-size: 14px;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .col-sm-6 {
+        width: 100%;
+        text-align: center;
+    }
+    i {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
