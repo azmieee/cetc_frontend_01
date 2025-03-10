@@ -155,7 +155,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(0, 0, 0, .75);
+    background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
 
@@ -168,8 +168,8 @@
 .carousel-control-next-icon {
     width: 3rem;
     height: 3rem;
-    background-color: var(--primary);
-    border: 10px solid var(--primary);
+    background-color: #f3bd0030;
+    border: 10px solid #f3bd0000;
 }
 
 @media (max-width: 768px) {
