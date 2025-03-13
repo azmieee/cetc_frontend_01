@@ -114,13 +114,13 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admission</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="#" class="dropdown-item active">Requirements</a>
+                        <a href="records-and-admission.html" class="dropdown-item">Requirements</a>
                         <a href="#" class="dropdown-item">Registration Guidelines</a>
                         <a href="#" class="dropdown-item">Grading System</a>
                         <a href="#" class="dropdown-item">Enrollment Procedure</a>
                     </div>
                 </div>
-                <a href="online _survey.html" class="nav-item nav-link">Online Survey</a>
+                <a href="online _survey.html" class="nav-item nav-link active">Online Survey</a>
             </div>
         </div>
     </nav>
@@ -131,12 +131,12 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">RECORDS AND ADMISSION</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-4">ONLINE SURVEY</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#"> Records and Admission</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Requirements</li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Online Survey</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Survey</li>
                 </ol>
             </nav>
         </div>
@@ -150,16 +150,24 @@
             display: flex;
             flex-direction: row;
             align-items: flex-start;
+            justify-content: space-between;
         }
-        /* Sidebar */
+        /* Move Sidebar to the Right */
         
         .sidebar {
-            width: 250px;
-            background-color: #ffffff;
+            order: 2;
+            /* Moves the sidebar to the right */
+            margin-left: 0;
+            margin-right: 10px;
+            /* Adjust spacing from the content */
+        }
+        /* Main Content */
+        
+        .right {
+            order: 1;
+            /* Keeps the main content on the left */
+            flex: 1;
             padding: 20px;
-            height: 100vh;
-            margin-left: 10px;
-            transition: transform 0.3s ease-in-out;
         }
         
         .sidebar h5 {
@@ -229,7 +237,7 @@
         .panel.active {
             display: block;
         }
-        /* ✅ Mobile Responsive Adjustments */
+        /*Mobile Responsive Adjustments */
         
         @media (max-width: 768px) {
             .container-admission {
@@ -238,10 +246,13 @@
             }
             .sidebar {
                 width: 100%;
+                order: -1;
+                /* Moves sidebar to the top */
                 height: auto;
                 margin-left: 0;
                 padding: 10px;
-                text-align: center;
+                text-align: left;
+                /* Aligns text to the left */
             }
             .menu-item {
                 width: 100%;
@@ -267,35 +278,301 @@
         }
     </style>
 
+    <style>
+        .search-bar {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .search-bar input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .search-bar button {
+            border-radius: 5px;
+        }
+    </style>
+
+    <style>
+        /* General Styling */
+        
+        .sidebar {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-left: 3px solid #ffc107;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Section Titles */
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 3px;
+            height: 20px;
+            background-color: #ffc107;
+            transform: translateY(-50%);
+        }
+        /* Recent News */
+        
+        .recent-news {
+            margin-bottom: 20px;
+        }
+        
+        .news-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .news-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        
+        .news-item p {
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            line-height: 1.4;
+        }
+        /* News Archives */
+        
+        .news-archives ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .news-archives li {
+            font-size: 14px;
+            color: #000;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        
+        .news-archives li:last-child {
+            border-bottom: none;
+        }
+        
+        .news-archives li:hover {
+            color: #ffc107;
+        }
+        /* Style links */
+        
+        .sidebar a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 12px;
+        }
+        
+        .sidebar a:hover {
+            color: #ffa406;
+        }
+    </style>
+
     <div class="container-admission">
         <!-- Right Sidebar -->
         <div class="sidebar">
-            <h5>ADMISSIONS</h5>
-            <button class="menu-item">Requirements</button>
-            <button class="menu-item inactive">Registration Guidelines</button>
-            <button class="menu-item inactive">Grading System</button>
-            <h5>ENROLLMENT PROCEDURE</h5>
-            <button class="menu-item inactive">Old Student</button>
-            <button class="menu-item inactive">Freshmen Student</button>
-            <button class="menu-item inactive">Transferee Student</button>
-        </div>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="sidebarSearch" class="form-control" placeholder="Search...">
+                <button class="btn btn-warning"><i class="fa fa-search"></i></button>
+            </div>
+            <h3 class="section-title">RECENT SURVEY</h3>
+            <div class="recent-news">
+                <div class="news-item">
 
+                    <img src="img/ONLINE_SURVERY.jpeg" alt="News 1">
+                    <a href="">
+                        SELF-ASSESSMENT REPORT (SAR) WRITING WORKSHOP FOR SUCCESSFUL AUN-QA PROGRAMME ASSESSMENT
+                    </a>
+                </div>
+
+                <div class="news-item">
+                    <img src="img/ONLINE_SURVERY.jpeg" alt="News 2">
+                    <a href="">
+                        UM BIDS FAREWELL TO 4 INBOUND STUDENTS FROM UBJ'S 3-MONTH ACADEMIC EXCHANGE PROGRAM
+                    </a>
+                </div>
+                <div class="news-item">
+                    <img src="img/ONLINE_SURVERY.jpeg" alt="News 3">
+                    <a href="">
+                        OBSERVANCE OF ALL SAINTS DAY
+                    </a>
+                </div>
+            </div>
+
+            <h3 class="section-title">SURVEY CATEGROY</h3>
+            <div class="news-archives">
+                <ul>
+                    <li>
+                        <a href="">Agriculture, Fisheries and Forestry</a>
+                    </li>
+                    <li>
+                        <a href="">Business and Public Administration</a>
+                    </li>
+                    <li>
+                        <a href="">Communtiy Devalopment</a>
+                    </li>
+                    <li>
+                        <a href="">Education, Languages and Mathematics</a>
+                    </li>
+                    <li>
+                        <a href="">Engineering, Teachnology and Computing</a>
+                    </li>
+                    <li>
+                        <a href="">Halal and Islamic Studies</a>
+                    </li>
+                    <li>
+                        <a href="">Peace and Development</a>
+                    </li>
+                    <li>
+                        <a href="">Psychology and Social Work</a>
+                    </li>
+                    <li>
+                        <a href="">Other</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <style>
+            .meta-info {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 10px;
+                color: #777;
+                gap: 6px;
+                padding: 5px 10px;
+                background: #f8f9fa;
+                border-top: 1px solid #ddd;
+            }
+            
+            .meta-info i {
+                font-size: 10px;
+                margin-right: 3px;
+                color: #888;
+            }
+            
+            .separator {
+                color: #ccc;
+                font-size: 10px;
+            }
+        </style>
+        <style>
+            .course-image {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                display: block;
+            }
+            
+            .image-container {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .course-image {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            
+            .h5-container {
+                background: #f8f9fa;
+                padding: 14px;
+                padding-top: 0%;
+                border-radius: 5px;
+                text-align: start;
+                height: 200px;
+            }
+            
+            .h5-container h5 {
+                display: -webkit-box;
+                -webkit-line-clamp: 7;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        </style>
         <!-- Main Content -->
         <div class="right">
-            <h2>ADMISSION REQUIREMENTS</h2>
-            <button class="accordion"><strong>Old Student</strong></button>
-            <div class="panel">
-                <p></p>
-            </div>
-
-            <button class="accordion"><strong>Freshmen</strong></button>
-            <div class="panel">
-                <p></p>
-            </div>
-
-            <button class="accordion"><strong>Transferee</strong></button>
-            <div class="panel">
-                <p></p>
+            <div class="row g-3 justify-content-start">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/ONLINE_SURVERY.jpeg" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-outline-primary " href="">ANSWER</i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-start p-4">
+                            <h5 class="mt-2">SURVEY TITLE</h5>
+                            <span>Category: Engineering, Teachnology and Computing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/ONLINE_SURVERY.jpeg" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-outline-primary " href="">ANSWER</i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-start p-4">
+                            <h5 class="mt-2">SURVEY TITLE</h5>
+                            <span>Category: Engineering, Teachnology and Computing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/ONLINE_SURVERY.jpeg" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-outline-primary " href="">ANSWER</i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-start p-4">
+                            <h5 class="mt-2">SURVEY TITLE</h5>
+                            <span>Category: Engineering, Teachnology and Computing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/ONLINE_SURVERY.jpeg" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-outline-primary " href="">ANSWER</i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-start p-4">
+                            <h5 class="mt-2">SURVEY TITLE</h5>
+                            <span>Category: Engineering, Teachnology and Computing</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>

@@ -120,7 +120,7 @@
                         <a href="#" class="dropdown-item">Enrollment Procedure</a>
                     </div>
                 </div>
-                <a href="#" class="nav-item nav-link">Survey</a>
+                <a href="online _survey.html" class="nav-item nav-link">Online Survey</a>
             </div>
         </div>
     </nav>
@@ -135,7 +135,7 @@
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#"> Records and Admission</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">News and Events</a></li>
                     <li class="breadcrumb-item text-primary active" aria-current="page">Recent News</li>
                 </ol>
             </nav>
@@ -451,23 +451,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                /* Centers content */
                 font-size: 10px;
-                /* Makes text smaller */
                 color: #777;
                 gap: 6px;
-                /* Reduces spacing between items */
                 padding: 5px 10px;
-                /* Adjust padding for a compact look */
                 background: #f8f9fa;
-                /* Light background for visibility */
                 border-top: 1px solid #ddd;
-                /* Adds a subtle top border */
             }
             
             .meta-info i {
                 font-size: 10px;
-                /* Makes icons smaller */
                 margin-right: 3px;
                 color: #888;
             }
@@ -475,34 +468,41 @@
             .separator {
                 color: #ccc;
                 font-size: 10px;
-                /* Smaller separator */
             }
         </style>
         <style>
             .course-image {
                 width: auto;
-                /* Keeps original width */
                 height: auto;
-                /* Keeps original height */
                 max-width: 100%;
-                /* Prevents overflow */
                 display: block;
-                /* Ensures no extra spacing */
             }
             
             .image-container {
                 width: 100%;
-                /* Ensures full width */
                 text-align: center;
-                /* Centers the image */
             }
             
             .course-image {
                 width: 100%;
-                /* Makes the image fill the container */
                 height: auto;
-                /* Keeps the aspect ratio */
                 display: block;
+            }
+            
+            .h5-container {
+                background: #f8f9fa;
+                padding: 14px;
+                padding-top: 0%;
+                border-radius: 5px;
+                text-align: start;
+                height: 200px;
+            }
+            
+            .h5-container h5 {
+                display: -webkit-box;
+                -webkit-line-clamp: 7;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
         </style>
         <!-- Main Content -->
@@ -527,7 +527,9 @@
                         </div>
                         <div class="text-start p-4 pt-0">
                             <div class="d-inline-block bg-light text-dark fs-5 py-1 px-4 mb-4"></div>
-                            <h5 class="mb-3">Self-Assessment Report (SAR) Writing Workshop for Successful AUN-QA Programme Assessment</h5>
+                            <div class="h5-container">
+                                <h5 class="mb-3">Self-Assessment Report (SAR) Writing Workshop for Successful AUN-QA Programme Assessment</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -548,7 +550,9 @@
                         </div>
                         <div class="text-start p-4 pt-0">
                             <div class="d-inline-block bg-light text-white fs-5 py-1 px-4 mb-4"></div>
-                            <h5 class="mb-3">UM bids farewell to 4 Inbound Students from UBJ's 3-Month Academic Exchange Program</h5>
+                            <div class="h5-container">
+                                <h5 class="mb-3">UM bids farewell to 4 Inbound Students from UBJ's 3-Month Academic Exchange Program</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -571,9 +575,9 @@
                         </div>
                         <div class="text-start p-4 pt-0">
                             <div class="d-inline-block bg-light text-white fs-5 py-1 px-4 mb-4"></div>
-                            <h5 class="mb-3">Announcement: New batch of Alumni IDs now available for claim</h5>
-                            <br>
-                            <br>
+                            <div class="h5-container">
+                                <h5 class="mb-3">Announcement: New batch of Alumni IDs now available for claim</h5>
+                            </div>
 
                         </div>
                     </div>
